@@ -22,6 +22,18 @@
   }
 
   function Rp(itemParallelo) {
+    arrayList.options.RpValues.push(
+      1 / addizioneValoriSotto(itemParallelo),
+    );
+
+    for (
+      let i = arrayList.options.RpValues.length;
+      i > arrayOfParalleli.length;
+      i--
+    ) {
+      arrayList.options.RpValues.shift();
+    }
+
     return 1 / addizioneValoriSotto(itemParallelo);
   }
 </script>
@@ -32,7 +44,8 @@
   {#each arrayOfParalleli as itemParallelo, indexParallelo}
     <div class="flex flex-wrap gap-4 border p-4">
       <div class="flex place-items-center gap-2">
-        <span class="font-bold">Rp{indexParallelo + 1}</span> =
+        <span class="font-bold">Rp{indexParallelo + 1}</span
+        > =
       </div>
 
       <div class="grid gap-1">

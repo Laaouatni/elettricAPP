@@ -3,7 +3,7 @@
 
   export let arrayList;
 
-  $: console.log("👀 ", arrayList);
+  $: console.log(arrayList);
 </script>
 
 <div class="grid gap-4 p-4">

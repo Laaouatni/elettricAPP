@@ -41,6 +41,7 @@
     ],
     options: {
       isSerie: false,
+      RpValues: [],
     },
   };
 </script>
@@ -48,6 +49,6 @@
 <NavbarOptions bind:arrayList />
 
 <ListData bind:arrayList />
-<Calcoli bind:arrayList/>
+<Calcoli bind:arrayList />
 
 <!-- <NavbarPagesBottom /> -->
