@@ -22,7 +22,7 @@
       {item.isResistenza
         ? 'focus:border-b-cyan-400'
         : 'focus:border-b-blue-400'}"
-      value={item.value}
+      bind:value={item.value}
     />
     {item.isResistenza ? "Ω" : "V"}
   </span>

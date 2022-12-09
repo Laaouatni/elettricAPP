@@ -5,6 +5,8 @@
   import NavbarOptions from "./NavbarOptions.svelte";
 
   let arrayList = [];
+
+  $: console.log(arrayList);
 </script>
 
 <NavbarOptions bind:arrayList />
