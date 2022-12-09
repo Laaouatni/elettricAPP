@@ -1,26 +1,25 @@
 <script>
   export let arrayList;
 
-  export let Rt = calculateRt();
-
-  function calculateRt() {
-    const allSerie = arrayList.data
-      .filter(
-        (item) => !Array.isArray(item) && item.isResistenza,
-      )
-      .map((item) => item.value)
-      .reduce(
-        (thisValue, total) =>
-          parseFloat(thisValue) + parseFloat(total),
-      );
-
-    const allParallelo = arrayList.options.RpValues.reduce(
-      (thisValue, total) => {
-        return parseFloat(thisValue) + parseFloat(total);
-      },
+  $: allSerie = arrayList.data
+    .filter(
+      (item) => !Array.isArray(item) && item.isResistenza,
+    )
+    .map((item) => item.value)
+    .reduce(
+      (thisValue, total) =>
+        parseFloat(thisValue) + parseFloat(total),
     );
-    return allSerie + allParallelo;
-  }
+
+  $: allParallelo = arrayList.options.RpValues.reduce(
+    (thisValue, total) => {
+      return parseFloat(thisValue) + parseFloat(total);
+    },
+  );
+
+  $: calculateRt = allSerie + allParallelo;
+
+  export let Rt = calculateRt
 </script>
 
 <div>
@@ -32,10 +31,8 @@
       {#each arrayList.data as itemSerie, indexSerie}
         {#if !Array.isArray(itemSerie) && itemSerie.isResistenza}
           <span>{itemSerie.value}</span>
-          {#if indexSerie !== arrayList.data.length - 1}
+          {#if indexSerie !== arrayList.data.length}
             +
-          {:else}
-            =
           {/if}
         {/if}
       {/each}
@@ -51,6 +48,6 @@
       {/each}
     </div>
 
-    <div>{calculateRt()} Ω</div>
+    <div>{calculateRt} Ω</div>
   </div>
 </div>

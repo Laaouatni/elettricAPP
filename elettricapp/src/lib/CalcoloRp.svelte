@@ -20,9 +20,6 @@
   }
 
   function Rp(itemParallelo) {
-    const risultato =
-      1 / addizioneValoriSotto(itemParallelo);
-
     arrayList.options.RpValues.push(
       1 / addizioneValoriSotto(itemParallelo),
     );
@@ -35,7 +32,7 @@
       arrayList.options.RpValues.shift();
     }
 
-    return risultato;
+    return 1 / addizioneValoriSotto(itemParallelo);
   }
 </script>
 
