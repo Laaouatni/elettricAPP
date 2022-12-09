@@ -3,8 +3,8 @@
   export let valueItem;
 
   function addGenerator() {
-    arrayList = [
-      ...arrayList,
+    arrayList.data = [
+      ...arrayList.data,
       {
         isResistenza: false,
         value: valueItem,
