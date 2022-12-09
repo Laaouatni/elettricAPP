@@ -7,7 +7,6 @@
 </script>
 
 <div class="sticky top-0 bg-white shadow-lg p-4 grid gap-4">
-  <h1 class="text-3xl font-bold">Opzioni.</h1>
   <div>
     <input
       class="border-2 w-full p-3 text-3xl rounded-md"
