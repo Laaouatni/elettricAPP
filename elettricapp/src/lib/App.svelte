@@ -18,26 +18,8 @@
     data: [
       {
         isResistenza: false,
-        value: 48,
+        value: 50,
       },
-      {
-        isResistenza: true,
-        value: 120,
-      },
-      [
-        {
-          isResistenza: true,
-          value: 1200,
-        },
-        {
-          isResistenza: true,
-          value: 800,
-        },
-        {
-          isResistenza: true,
-          value: 56,
-        },
-      ],
     ],
     options: {
       isSerie: false,
