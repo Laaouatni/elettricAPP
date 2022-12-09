@@ -14,7 +14,7 @@
 </script>
 
 <button
-  class="p-4 px-6 bg-blue-500 text-white font-semibold rounded-xl w-full sm:text-2xl text-[3vw]"
+  class="p-4 px-6 bg-blue-500 text-white font-semibold rounded-xl w-full text-2xl"
   on:click={addGenerator}
 >
   +Generatore

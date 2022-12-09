@@ -50,7 +50,7 @@
     >
   </div>
   <button
-    class="p-4 bg-cyan-500 text-white font-semibold rounded-tr-lg rounded-br-lg w-full sm:text-2xl text-[3vw]"
+    class="p-4 bg-cyan-500 text-white font-semibold rounded-tr-lg rounded-br-lg w-full text-2xl"
     on:click={addResistor}
   >
     +Resistenza

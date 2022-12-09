@@ -1,5 +1,5 @@
 <script>
-  import ListData from "$lib/ListData.svelte";
+  import App from "$lib/App.svelte";
 </script>
 
-<ListData />
+<App />
