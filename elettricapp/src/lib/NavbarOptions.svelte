@@ -16,7 +16,7 @@
       placeholder="enter value"
     />
   </div>
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid grid-cols-[1fr_auto] gap-4">
     <BtnResistenza bind:arrayList bind:valueItem />
     <BtnGeneratore bind:arrayList bind:valueItem />
   </div>

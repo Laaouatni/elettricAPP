@@ -4,13 +4,27 @@
   export let isSerie = true;
 
   function addResistor() {
-    arrayList.data = [
-      ...arrayList.data,
-      {
-        isResistenza: true,
-        value: valueItem,
-      },
-    ];
+    const objToAdd = {
+      isResistenza: true,
+      value: valueItem,
+    };
+
+    if (isSerie) {
+      arrayList.data = [...arrayList.data, objToAdd];
+    } else {
+      if (
+        !Array.isArray(
+          arrayList.data[arrayList.data.length - 1],
+        )
+      ) {
+        arrayList.data = [...arrayList.data, []];
+      }
+
+      arrayList.data[arrayList.data.length - 1] = [
+        ...arrayList.data[arrayList.data.length - 1],
+        objToAdd,
+      ];
+    }
   }
 
   $: isSerie == true
@@ -36,7 +50,7 @@
     >
   </div>
   <button
-    class="p-4 bg-cyan-500 text-white font-semibold rounded-tr-lg rounded-br-lg w-full text-2xl"
+    class="p-4 bg-cyan-500 text-white font-semibold rounded-tr-lg rounded-br-lg w-full sm:text-2xl text-[3vw]"
     on:click={addResistor}
   >
     +Resistenza

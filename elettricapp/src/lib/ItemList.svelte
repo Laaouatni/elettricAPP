@@ -18,7 +18,7 @@
   <span class="flex justify-center p-4 gap-2">
     <input
       type="number"
-      class="w-full text-center rounded-sm border-trasparent hover:border focus:border-b-2 outline-none
+      class="w-full text-center rounded-sm border border-transparent hover:border-gray-200 focus:border-b-2 outline-none
       {item.isResistenza
         ? 'focus:border-b-cyan-400'
         : 'focus:border-b-blue-400'}"
