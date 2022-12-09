@@ -17,5 +17,5 @@
   class="p-4 px-6 bg-blue-500 text-white font-semibold rounded-xl w-full text-2xl"
   on:click={addGenerator}
 >
-  +Generatore
+  +Gen.
 </button>

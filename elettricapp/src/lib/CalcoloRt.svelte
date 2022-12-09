@@ -1,9 +1,9 @@
 <script>
-  import { construct_svelte_component } from "svelte/internal";
-
   export let arrayList;
 
-  function Rt() {
+  export let Rt = calculateRt();
+
+  function calculateRt() {
     const allSerie = arrayList.data
       .filter(
         (item) => !Array.isArray(item) && item.isResistenza,
@@ -51,6 +51,6 @@
       {/each}
     </div>
 
-    <div>{Rt()} Ω</div>
+    <div>{calculateRt()} Ω</div>
   </div>
 </div>
